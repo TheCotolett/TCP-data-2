@@ -20,7 +20,7 @@ public class Server {
             //Ottenere data e orario correnti
             Date date = Calendar.getInstance().getTime();
             //Formattare data nel formato anno/mese/giorno ora/minuto/secodni
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             //conversione da date a String
             String dataString = dateFormat.format(date);
 
@@ -39,8 +39,8 @@ public class Server {
             //di una stream di output della socket
             PrintWriter pr = new PrintWriter(socket.getOutputStream());
             //Invio della data in formato stringa
-            pr.println(dataString); //Svuota il flusso di output e forza la scrittura dei byte memorizzati nel buffer
-            pr.flush();
+            pr.println(dataString);
+            pr.flush(); //Svuota il flusso di output e forza la scrittura dei byte memorizzati nel buffer
         } while (true);
     }
 }

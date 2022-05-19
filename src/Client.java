@@ -18,7 +18,7 @@ public class Client {
         pr.println("Client connesso");
         pr.flush(); //Svuota il flusso di output e forza la scrittura dei byte memorizzati nel buffer
 
-        //Instanziazione di InputStreamReader e BufferedReader
+        //Instanziamento di InputStreamReader e BufferedReader
         //con l'input dalla socket
         InputStreamReader in = new InputStreamReader(socket.getInputStream());
         BufferedReader bf = new BufferedReader(in);
